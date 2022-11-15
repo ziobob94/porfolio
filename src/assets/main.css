@@ -110,8 +110,13 @@ p {
   display: flex;
   height: auto;
   gap: 2.3rem;
-  max-width: 52%;
-  margin-bottom: 12%;
+  max-width: 80%;
+}
+
+.list-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /*# sourceMappingURL=main.css.map */

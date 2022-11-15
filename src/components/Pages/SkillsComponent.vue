@@ -6,10 +6,12 @@
           <h1 :class="'bounce2'">FRONT END SKILLS</h1>
         </div>
         <transition-group >
-          <div v-if="togglerSkillsFE" ref="skillsFe" class="body-content skills wrapper el description">
-            <li v-for="(el) in listLogos" :key="el.name" class="skill skill-enter-to">
-              <img :src="el.url" :alt="'logo'+el.name" class="skill-logo"/>
-            </li>
+          <div v-if="togglerSkillsFE" class="list-wrapper">
+            <ul ref="skillsFe" class="body-content skills wrapper el description" >
+              <li v-for="(el) in listLogos" :key="el.name" class="skill skill-enter-to">
+                <img :src="el.url" :alt="'logo'+ el.name" class="skill-logo"/>
+              </li>
+            </ul>
           </div>
         </transition-group>
       </div>
@@ -20,10 +22,12 @@
           <h1 :class="'bounce2'">BACK END SKILLS</h1>
         </div>
         <transition-group >
-          <div v-if="togglerSkillsBE" class="body-content skills wrapper el description">
-            <li v-for="(el) in listLogos" :key="el.name" class="skill skill-enter-to">
-              <img :src="el.url" :alt="'logo'+el.name" class="skill-logo"/>
-            </li>
+          <div v-if="togglerSkillsBE"  class="list-wrapper">
+            <ul class="body-content skills wrapper el description">
+              <li v-for="(el) in listLogos" :key="el.name" class="skill skill-enter-to">
+                <img :src="el.url" :alt="'logo'+el.name" class="skill-logo"/>
+              </li>
+            </ul>
           </div>
         </transition-group>
       </div>
@@ -34,10 +38,12 @@
           <h1 :class="'bounce2'">HARDWARE SKILLS</h1>
         </div>
         <transition-group >
-          <div v-if="togglerSkillsHS" class="body-content skills wrapper el description">
-            <li v-for="(el) in listLogos" :key="el.name" class="skill skill-enter-to">
-              <img :src="el.url" :alt="'logo'+el.name" class="skill-logo"/>
-            </li>
+          <div v-if="togglerSkillsHS"  class="list-wrapper">
+            <ul class="body-content skills wrapper el description">
+              <li v-for="(el) in listLogos" :key="el.name" class="skill skill-enter-to">
+                <img :src="el.url" :alt="'logo'+el.name" class="skill-logo"/>
+              </li>
+            </ul>
           </div>
         </transition-group>
       </div>
@@ -133,6 +139,7 @@ export default {
 </script>
 
 <style scoped>
+
 
 .skill-logo{
   width: 4rem;
