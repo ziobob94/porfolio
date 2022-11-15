@@ -1,13 +1,11 @@
-}<template>
-  <div class="menu-container" >
+<template>
+  <div  class="menu-container">
 <!--    <TabMenu v-model="items" ></TabMenu>-->
-    <TabMenu :model="items" :activeIndex="this.getIndex()" class="tab-menu">
-        <router-link :to="item.to">
-        </router-link>
-    </TabMenu>
+    <TabMenu @tab-change="getIndex()" :model="items" class="tab-menu"/>
   </div>
-</template>s
+</template>
 <script>
+//import * as _ from 'lodash';
 import TabMenu from 'primevue/tabmenu';
 //import MenuBar from 'primevue/menubar';
 
@@ -18,9 +16,13 @@ export default {
     TabMenu,
     //MenuBar
   },
+  mounted() {
+    this.location = window.location.pathname;
+  },
   data() {
     return {
-      location: window.location.pathname,
+      active: '',
+      location: '',
       items: [
         {
           label: 'Home',
@@ -50,14 +52,10 @@ export default {
     }
   },
   methods: {
-    navigator: function (route) {
-      console.log(route);
-      this.$router.push(route.path);
-    },
     getIndex: function () {
-      console.log(location, this.items.findIndex((el) => el.to === location.pathname));
-
-      return this.items.findIndex((el) => el.to === location)
+      let index = this.items.findIndex((el) => el.to.path === this.location);
+      console.log(index);
+      if(index >= 0) this.location = this.items[index].to.path;
     },
   }
 
@@ -70,6 +68,7 @@ export default {
   padding-top: 0.5rem;
   z-index: 1;
   background: #071426;
+  position:fixed;
 }
 .tab-menu{
   background: #071426;
