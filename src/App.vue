@@ -39,57 +39,55 @@ export default {
 .slide-down-leave-active {
   //top: calc(50px + 1rem);
   transition: all 1s ease-out;
-  height: calc(100vh - (50px + 1rem));
+  //height: calc(100vh - (50px + 1rem));
 }
 
 .slide-up-enter-to {
   position: absolute;
-  height: calc(100vh - (50px + 1rem));
   top: 0;
-  margin-top: calc(50px + 1rem);
+  //height: calc(100vh - (50px + 1rem));
+  //margin-top: calc(50px + 1rem);
 }
 .slide-up-enter-from {
-  margin-top: calc(50px + 1rem);
   position: absolute;
-  height: calc(100vh - (50px + 1rem));
-  top: calc(100vh - (50px + 1rem));
+  top: 100vh;
+  //margin-top: calc(50px + 1rem);
 }
 .slide-up-leave-to {
-  margin-top: calc(50px + 1rem);
+  //margin-top: calc(50px + 1rem);
   position: absolute;
-  height: calc(100vh - (50px + 1rem));
-  top:  calc(-100vh + (50px + 1rem));
+  //height: 100vh;
+  top:  -100vh;
 }
 .slide-up-leave-from {
   position: absolute;
-  height: calc(100vh - (50px + 1rem));
-  top: calc(50px + 1rem);
+  //height: 100vh;
+  top: 0;
 }
 
 
 
 .slide-down-enter-from {
-  margin-top: calc(50px + 1rem);
+  // margin-top: calc(50px + 1rem);
   position: absolute;
-  height: calc(100vh - (50px + 1rem));
-  top:  calc(-100vh + (50px + 1rem));
+  //height: 100vh;
+  top:  -100vh;
 }
 .slide-down-enter-to {
   position: absolute;
-  height: calc(100vh - (50px + 1rem));
-  top: calc((50px + 1rem));
+  //height: 100vh;
+  top: 0;
 }
 .slide-down-leave-from {
   position: absolute;
-  height: calc(100vh - (50px + 1rem));
-  top: calc(50px + 1rem);
-
+  //height: 100vh;
+  top: 0
 }
 .slide-down-leave-to {
-  margin-top: calc(50px + 1rem);
+  //margin-top: calc(50px + 1rem);
   position: absolute;
-  height: calc(100vh - (50px + 1rem));
-  top: calc(100vh - (50px + 1rem));
+  //height: 100vh;
+  top: 100vh;
 }
 
 
