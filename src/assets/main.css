@@ -30,11 +30,12 @@ p {
   align-items: center;
   min-height: 100vh;
   position: relative;
-  background: #071426;
+  background: #432954;
+  background: linear-gradient(90deg, #432954 0%, #2f0f5b 43%, #042e32 100%);
 }
 
 .body-container {
-  position: relative;
+  position: absolute;
   width: 100%;
   padding: 1rem;
   justify-content: center;
@@ -42,9 +43,16 @@ p {
   display: flex;
   flex: 1 1 auto;
   height: calc(100vh - (50px + 1rem));
-  background: rgb(67, 41, 84);
-  background: linear-gradient(90deg, rgb(67, 41, 84) 0%, rgb(47, 15, 91) 43%, rgb(4, 46, 50) 100%);
+  background: #432954;
+  background: linear-gradient(90deg, #432954 0%, #2f0f5b 43%, #042e32 100%);
+  margin-top: calc(50px + 1rem);
   /*  background: #024955*/
+}
+.body-container.sk {
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: unset;
 }
 
 /* **************** BODY CONTENT PAGES ************** */
@@ -87,17 +95,23 @@ p {
 .body-content.skills {
   display: flex;
   align-items: center;
-  justify-content: center;
-  margin-bottom: 6%;
+  justify-content: space-between;
+  width: 100%;
+  height: calc(100vh - (50px + 2rem));
 }
 .body-content.skills.wrapper.el.title {
   cursor: pointer;
+  height: auto;
+  margin-top: 11%;
 }
 .body-content.skills.wrapper.el.description {
   flex-direction: row;
   flex-wrap: wrap;
   display: flex;
+  height: auto;
   gap: 2.3rem;
+  max-width: 52%;
+  margin-bottom: 12%;
 }
 
 /*# sourceMappingURL=main.css.map */
