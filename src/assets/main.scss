@@ -29,11 +29,12 @@ p{
     align-items: center;
     min-height: 100vh;
     position: relative;
-    background: #071426;
+    background: rgb(67,41,84);
+    background: linear-gradient(90deg, rgba(67,41,84,1) 0%, rgba(47,15,91,1) 43%, rgba(4,46,50,1) 100%);
 }
 
 .body-container{
-    position: relative;
+    position: absolute;
     width: 100%;
     padding: 1rem;
     justify-content: center;
@@ -43,7 +44,14 @@ p{
     height:calc(100vh - (50px + 1rem));
     background: rgb(67,41,84);
     background: linear-gradient(90deg, rgba(67,41,84,1) 0%, rgba(47,15,91,1) 43%, rgba(4,46,50,1) 100%);
+    margin-top: calc(50px + 1rem);
     /*  background: #024955*/
+    &.sk{
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        height: unset;
+    }
 }
 
 /* **************** BODY CONTENT PAGES ************** */
@@ -86,22 +94,29 @@ p{
             }
         }
     }
-
-    &.skills{
+    &.skills {
         display: flex;
         align-items: center;
-        justify-content: center;
-        margin-bottom: 6%;
-        &.wrapper{
-            &.el{
-                &.title{
+        justify-content: space-between;
+        width: 100%;
+        height: calc(100vh - (50px + 2rem));
+
+        &.wrapper {
+            &.el {
+                &.title {
                     cursor: pointer;
+                    height: auto;
+                    margin-top: 11%;
                 }
-                &.description{
+
+                &.description {
                     flex-direction: row;
                     flex-wrap: wrap;
                     display: flex;
+                    height: auto;
                     gap: 2.3rem;
+                    max-width: 52%;
+                    margin-bottom: 12%;
                 }
             }
         }
