@@ -1,28 +1,65 @@
 <template>
   <div class="main-container">
-    <MenuComponent></MenuComponent>
-    <router-view v-slot="{ Component, route }">
-      <transition :name="route.meta.transitionName">
-        <component :is="Component" :key="route.path" />
-      </transition>
-    </router-view>
+      <TheMenuComponent/>
+      <div class="body-wrapper">
+          <Particles
+                  id="tsparticles"
+                  :particlesInit="particlesInit"
+                  :particlesLoaded="particlesLoaded"
+                  url="http://foo.bar/particles.json"
+          />
+          <Particles
+                  id="tsparticles"
+                  :particlesInit="particlesInit"
+                  :particlesLoaded="particlesLoaded"
+                  :options="particlesOptions"
+          >
+          </Particles>
+          <router-view v-slot="{ Component }">
+              <!-- Use any custom transition and  to `fade` -->
+              <transition name="moveUp" mode="out-in" >
+                  <component :is="Component" />
+              </transition>
+          </router-view>
+      </div>
+
+
   </div>
 
 </template>
 
 <script>
-import './assets/main.scss';
-import 'primevue/resources/primevue.css';
-import 'primeicons/primeicons.css';
-import 'primevue/resources/themes/lara-dark-indigo/theme.css';
-import MenuComponent from './components/MenuComponent.vue';
-import FooterComponent from './components/FooterComponent.vue';
+
+import TheMenuComponent from './components/layout/TheMenuComponent.vue';
+import TheFooterComponent from './components/layout/TheFooterComponent.vue';
+import "./assets/main.scss";
+import "./assets/animations.scss";
+import "./assets/transitions.scss";
+import { loadFull } from "tsparticles";
+import * as particlesOptions from "./assets/particlesjs-config.json"
 
 export default {
   name: 'App',
   components: {
-    MenuComponent,
-    FooterComponent
+    TheMenuComponent,
+    TheFooterComponent
+  },
+  data(){
+      return{
+          particlesOptions
+      }
+  },
+  async mounted() {
+
+  },
+  methods:{
+      particlesInit : async engine => {
+          await loadFull(engine);
+      },
+
+     particlesLoaded : async container => {
+          console.log("Particles container loaded", container);
+      }
   }
 }
 </script>
@@ -31,75 +68,5 @@ export default {
 
 <style lang="scss">
 
-/* *********** TRANSITIONS *************** */
-
-.slide-up-enter-active,
-.slide-up-leave-active,
-.slide-down-enter-active,
-.slide-down-leave-active {
-  //top: calc(50px + 1rem);
-  transition: all 1s ease-out;
-  //height: calc(100vh - (50px + 1rem));
-}
-
-.slide-up-enter-to {
-  position: absolute;
-  top: 0;
-  //height: calc(100vh - (50px + 1rem));
-  //margin-top: calc(50px + 1rem);
-}
-.slide-up-enter-from {
-  position: absolute;
-  top: 100vh;
-  //margin-top: calc(50px + 1rem);
-}
-.slide-up-leave-to {
-  //margin-top: calc(50px + 1rem);
-  position: absolute;
-  //height: 100vh;
-  top:  -100vh;
-}
-.slide-up-leave-from {
-  position: absolute;
-  //height: 100vh;
-  top: 0;
-}
-
-
-
-.slide-down-enter-from {
-  // margin-top: calc(50px + 1rem);
-  position: absolute;
-  //height: 100vh;
-  top:  -100vh;
-}
-.slide-down-enter-to {
-  position: absolute;
-  //height: 100vh;
-  top: 0;
-}
-.slide-down-leave-from {
-  position: absolute;
-  //height: 100vh;
-  top: 0
-}
-.slide-down-leave-to {
-  //margin-top: calc(50px + 1rem);
-  position: absolute;
-  //height: 100vh;
-  top: 100vh;
-}
-
-
-
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 1s ease;
-}
-
-.fade-enter-from,
-.fade-leave-to {
-  opacity: 0;
-}
 
 </style>
