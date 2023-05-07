@@ -16,7 +16,7 @@
                          :style="{
                             animationDelay: index*200+'ms',
                          }"
-                         @click="goTo(social.link)"
+                         @click="goTo(social.link, social.id)"
                     >
                         <img class="social-logo" 
                             :src='getImgUrl(social.icon)'
@@ -36,51 +36,18 @@ export default {
   components: {
       BodyLayoutTemplate,
   },
-  props: {
-    msg: String,
-  },
+  props: ['socialButtons'],
   data(){
     return{
-        socialButtons: [
-        {
-            id: 'github',
-            name: 'github',
-            icon: "/social/github.svg",
-            link:'https://github.com/ziobob94'
-        },
-        {
-            id: 'linkedin',
-            name: 'linkedin',
-            icon: "/social/linkedin.svg",
-            link:''
-        },
-        {
-            id: 'instagram',
-            name: 'instagram',
-            icon: "/social/instagram.svg",
-            link:''
-        },
-        {
-            id: 'telegram',
-            name: 'telegram',
-            icon: "/social/telegram.svg",
-            link: ''
-        },
-       {
-            id: 'mail',
-            name: 'mail',
-            icon: "/social/mail.svg",
-            link:''
-        },
-    ]
+
     }
   },
   methods: {
     getImgUrl(url) {
             return './assets'+url
         },
-    goTo(url){
-        window.open( url, "_blank");
+    goTo(url,id){
+        if(id !== 'mail') window.open( url, "_blank");
     }
   },
 }
@@ -109,30 +76,13 @@ export default {
     width: 3.5rem;
     margin-right: 1rem;
     cursor: pointer;
+    transform: scale(1);
+    transition: transform 0.5s ease-in;
     &:hover {
-        animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
-        transform: translate3d(0, 0, 0);
+        transform: scale(1.2);
+        transition: transform 0.5s ease-in;
         backface-visibility: hidden;
-        perspective: 1000px;
       }
 }
 
-
-  @keyframes shake {
-    10%, 90% {
-      transform: translate3d(-1px, 0, 0);
-    }
-    
-    20%, 80% {
-      transform: translate3d(2px, 0, 0);
-    }
-  
-    30%, 50%, 70% {
-      transform: translate3d(-4px, 0, 0);
-    }
-  
-    40%, 60% {
-      transform: translate3d(4px, 0, 0);
-    }
-  }
 </style>
