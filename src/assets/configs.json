@@ -37,6 +37,16 @@
             "link": "https://jquery.com/"
         },
         {
+            "name": "rest api",
+            "url": "/logos/rest-api.svg",
+            "link": "https://docs.github.com/en/rest?apiVersion=2022-11-28"
+        },
+                {
+            "name": "mqtt",
+            "url": "/logos/mqtt.png",
+            "link": "https://mqtt.org/"
+        },
+        {
             "name": "graphql",
             "url": "/logos/graphql-logo-2.svg",
             "link": "https://graphql.org/"
