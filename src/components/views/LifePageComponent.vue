@@ -1,7 +1,7 @@
 <template>
     <BodyLayoutTemplate>
         <template #body >
-            <h1>CV</h1>
+            <h1> Coming soon... </h1>
         </template>
     </BodyLayoutTemplate>
 </template>

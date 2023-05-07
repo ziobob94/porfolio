@@ -113,3 +113,60 @@ p{
         transition: font-size ease-in 300ms ;
     }
 }
+
+
+
+/* *********** SKILL PAGE ****************** */
+
+
+.logos-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    margin: 2rem;
+    align-items: center;
+    justify-content: center;
+  }
+  .list-logo {
+    border-radius: 50%;
+    /* background: #5633564f; */
+    padding: 1rem;
+    opacity: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 1s;
+    animation-delay: 2s;
+    animation-direction: normal;
+    animation-fill-mode: both;
+    animation-iteration-count: 1;
+    animation-name: fadeIn;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin: 0.5rem;
+    transform: scale(1.0);
+    transition: transform 0.3s ease-out;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+     margin-bottom: 1rem;
+    & > img{
+        height: 50px;
+        width: 50px;
+        box-shadow:  27px -11px 118px #855e8530;
+  
+    }
+  
+    &:hover{
+        transform: scale(1.20);
+        transition: transform 0.3s ease-out;
+  
+    }
+  
+  }
+  
+  .logo-title{
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
