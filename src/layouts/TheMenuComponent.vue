@@ -1,32 +1,39 @@
-<template>
-    <div
-        class="menu-container"
+<template >
+    <v-tabs
+        v-if="isTab"
+        align-tabs="center"
+        class="w-100"
     >
-        <div class="pi">
-            <img src>
-        </div>
-        <h2 v-for="(link, index) in items"
-            @click="navigate(link.to)"
-            :key="link.name"
-            :ref="link.name"
-            :style="{
-                animationDelay: index*200+'ms',
-            }"
-            :class="[
-                'menu-link',
-                 ( this.$route.path === link.to.path ) ? 'b-active' : ''
-               ]"
+        <v-tab v-for="(item, index) in items" 
+                :value="index+1"
+                :key="item.label+'-key'" 
+                :to="item.to">{{item.label}}</v-tab>
+    </v-tabs>
+    
+    <TheThemeSwhitcher  v-if="isTab" class=""/>
 
-        > {{link.label}} </h2>
-    </div>
+    <v-list v-if="isSide">
+        <v-list-item v-for="(item, index) in items" 
+            :value="index+1"
+            :key="item.label+'-key'" 
+            :to="item.to">{{item.label}}
+        </v-list-item>
+    </v-list>
 </template>
 <script>
+import TheThemeSwhitcher from '../utils/TheThemeSwhitcher.vue';
+
 
 
 export default {
     name: "TheMenuComponent",
+    props: [
+        'isTab',
+        'isSide'
+    ],
     components: {
-    },
+    TheThemeSwhitcher
+},
     mounted() {
     },
     data() {

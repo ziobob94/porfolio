@@ -1,134 +1,183 @@
 {
-    "logosList": [
-        {
-            "name": "html",
-            "url": "/logos/html-1.svg",
-            "link": "https://developer.mozilla.org/en-US/docs/Web/HTML"
-        },
-        {
-            "name": "css",
-            "url": "/logos/css-3.svg",
-            "link": "https://developer.mozilla.org/en-US/docs/Web/CSS"
-        },
-        {
-            "name": "js",
-            "url": "/logos/javascript-1.svg",
-            "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
-        },
-        {
-            "name": "ts",
-            "url": "/logos/typescript-2.svg",
-            "link": "https://www.typescriptlang.org/"
-        },
-        {
-            "name": "vue",
-            "url": "/logos/vue-js-1.svg",
-            "link": "https://vuejs.org/"
-        },
-
-        {
-            "name": "react",
-            "url": "/logos/react-2.svg",
-            "link": "https://react.dev/"
-        },
-        {
-            "name": "jquery",
-            "url": "/logos/jquery-2.svg",
-            "link": "https://jquery.com/"
-        },
-        {
-            "name": "rest api",
-            "url": "/logos/rest-api.svg",
-            "link": "https://docs.github.com/en/rest?apiVersion=2022-11-28"
-        },
-                {
-            "name": "mqtt",
-            "url": "/logos/mqtt.png",
-            "link": "https://mqtt.org/"
-        },
-        {
-            "name": "graphql",
-            "url": "/logos/graphql-logo-2.svg",
-            "link": "https://graphql.org/"
-        },
-        {
-            "name": "nodejs",
-            "url": "/logos/nodejs-1.svg",
-            "link": "https://nodejs.org/en"
-        },
-        {
-            "name": "laravel",
-            "url": "/logos/laravel-2.svg",
-            "link":"https://laravel.com/"
-        },
-
-        {
-            "name": "php",
-            "url": "/logos/php-1.svg",
-            "link": "https://www.php.net/"
-        },
-        {
-            "name": "java",
-            "url": "/logos/java.svg",
-            "link": "https://docs.oracle.com/en/java/"
-        },
-        {
-            "name": "python",
-            "url": "/logos/python.svg",
-            "link": "https://www.python.org/"
-        },
-        {
-            "name": "c",
-            "url": "/logos/c.svg",
-            "link": "https://devdocs.io/c/"
-        },
-
-
-        {
-            "name": "mongob",
-            "url": "/logos/mongodb-icon-1.svg",
-            "link": "https://www.mongodb.com/"
-        },
-        {
-            "name": "mysql",
-            "url": "/logos/mysql.svg",
-            "link": "https://www.mysql.com/"
-        },
-        {
-            "name": "firebase",
-            "url": "/logos/firebase-1.svg",
-            "link": "https://firebase.google.com/"
-        },
-
-        {
-            "name": "jira",
-            "url": "/logos/jira.svg",
-            "link": "https://www.atlassian.com/it/software/jira"
-        },
-        {
-            "name": "bitbucket",
-            "url": "/logos/bitbucket.svg",
-            "link": "https://bitbucket.org/soulwebdev/workspace/overview"
-        },
-
-        {
-            "name": "git",
-            "url": "/logos/git.svg",
-            "link": "https://git-scm.com/"
-        },
-        {
-            "name": "grafana",
-            "url": "/logos/grafana.svg",
-            "link": "https://grafana.com/"
-        },
-       {
-            "name": "prometheus",
-            "url": "/logos/prometheus.svg",
-            "link": "https://prometheus.io/"
-        }
-
-
-    ],        
+  "logosList": [
+    {
+      "name": "html",
+      "description": "HTML (Hypertext Markup Language) is the standard markup language for creating web pages and web applications. It provides a structured way to define the content and layout of a webpage, including text, images, links, and other elements. HTML forms the foundation of every web page and is essential for building a structured and accessible web presence.",
+      "des_img": "",
+      "url": "/logos/html-1.svg",
+      "link": "https://developer.mozilla.org/en-US/docs/Web/HTML",
+      "visible": false
+    },
+    {
+      "name": "css",
+      "description": "CSS (Cascading Style Sheets) is a powerful stylesheet language used to control the visual presentation and layout of web pages written in HTML. It allows developers to define styles such as colors, fonts, spacing, and responsive design. CSS plays a crucial role in creating visually appealing and user-friendly websites.",
+      "des_img": "",
+      "url": "/logos/css-3.svg",
+      "link": "https://developer.mozilla.org/en-US/docs/Web/CSS",
+      "visible": false
+    },
+    {
+      "name": "js",
+      "description": "JavaScript is a versatile and dynamic programming language primarily used for front-end web development. It enables interactivity and enhances user experience by allowing developers to create dynamic and responsive web pages. JavaScript is also used on the server side (Node.js) to build scalable and efficient network applications.",
+      "des_img": "",
+      "url": "/logos/javascript-1.svg",
+      "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+      "visible": false
+    },
+    {
+      "name": "ts",
+      "description": "TypeScript is a superset of JavaScript that adds static typing, interfaces, and other features to enhance code quality and maintainability. It provides a more robust development experience by catching errors at compile time and enabling developers to build large-scale applications with confidence.",
+      "des_img": "",
+      "url": "/logos/typescript-2.svg",
+      "link": "https://www.typescriptlang.org/",
+      "visible": false
+    },
+    {
+      "name": "php",
+      "description": "PHP is a widely-used scripting language designed for web development. It enables developers to create dynamic and interactive web pages, process forms, and interact with databases. Despite evolving technology trends, PHP remains a foundational language for building web applications of various sizes and complexities.",
+      "des_img": "",
+      "url": "/logos/php-1.svg",
+      "link": "https://www.php.net/",
+      "visible": false
+    },
+    {
+      "name": "python",
+      "description": "Python is a versatile and beginner-friendly programming language renowned for its readability and ease of use. It is utilized in web development, data analysis, scientific computing, artificial intelligence, and more. Python's extensive libraries and frameworks make it a versatile choice for various applications.",
+      "des_img": "",
+      "url": "/logos/python.svg",
+      "link": "https://www.python.org/",
+      "visible": false
+    },
+    {
+      "name": "c",
+      "description": "C is a general-purpose and procedural programming language known for its efficiency and low-level capabilities. It is commonly used in system programming, embedded systems, and applications that require high performance and direct memory access. C's influence has led to the development of many other programming languages.",
+      "des_img": "",
+      "url": "/logos/c.svg",
+      "link": "https://devdocs.io/c/",
+      "visible": false
+    },
+    {
+      "name": "java",
+      "description": "Java is a versatile and object-oriented programming language known for its platform independence and robustness. It is commonly used in web development, mobile app development (Android), enterprise software, and large-scale systems. Java's extensive standard library and rich ecosystem contribute to its widespread adoption.",
+      "des_img": "",
+      "url": "/logos/java.svg",
+      "link": "https://docs.oracle.com/en/java/",
+      "visible": false
+    },
+    {
+      "name": "vue",
+      "description": "Vue.js is a progressive JavaScript framework for building user interfaces. It emphasizes declarative rendering and component-based architecture, making it easier to create interactive and reusable UI components. Vue.js is well-suited for both small projects and complex single-page applications.",
+      "des_img": "",
+      "url": "/logos/vue-js-1.svg",
+      "link": "https://vuejs.org/",
+      "visible": false
+    },
+    {
+      "name": "react",
+      "description": "React is a popular JavaScript library for building user interfaces. It follows a component-based architecture, allowing developers to create reusable UI components and manage the state of their applications efficiently. React's virtual DOM and unidirectional data flow contribute to faster rendering and better performance.",
+      "des_img": "",
+      "url": "/logos/react-2.svg",
+      "link": "https://react.dev/",
+      "visible": false
+    },
+    {
+      "name": "vuetify",
+      "description": "Vuetify is a popular Vue.js framework for building responsive and attractive user interfaces. It provides a set of reusable components and directives that follow Material Design principles. Vuetify simplifies UI development and helps create consistent and visually appealing web applications.",
+      "des_img": "",
+      "url": "/logos/vuetify.png",
+      "link": "https://vuetifyjs.com/",
+      "visible": false
+    },
+    {
+      "name": "primevue",
+      "description": "PrimeVue is a UI component library for Vue.js, offering a rich set of customizable components for building modern web applications. It follows the Prime Design System and provides a wide range of components, styles, and themes to enhance the user experience and streamline development.",
+      "des_img": "",
+      "url": "/logos/primevue.webp",
+      "link": "https://primefaces.org/primevue/",
+      "visible": false
+    },
+    {
+      "name": "laravel",
+      "description": "Laravel is a robust and elegant PHP web framework known for its developer-friendly syntax and comprehensive features. It simplifies common tasks such as routing, authentication, caching, and database management, allowing developers to focus on creating high-quality web applications with ease.",
+      "des_img": "",
+      "url": "/logos/laravel-2.svg",
+      "link": "https://laravel.com/",
+      "visible": false
+    },
+    {
+      "name": "nodejs",
+      "description": "Node.js is a runtime environment that enables server-side execution of JavaScript. It uses an event-driven, non-blocking I/O model, making it well-suited for building scalable network applications. Node.js has a vast ecosystem of packages and libraries available through npm (Node Package Manager) and is widely used for web servers, APIs, and microservices.",
+      "des_img": "",
+      "url": "/logos/nodejs-1.svg",
+      "link": "https://nodejs.org/en",
+      "visible": false
+    },
+    {
+      "name": "rest api",
+      "description": "A Representational State Transfer (REST) API is an architectural style for designing networked applications. It leverages HTTP methods to perform CRUD (Create, Read, Update, Delete) operations on resources. REST APIs provide a standardized and scalable approach to building web services, enabling interoperability between different systems.",
+      "des_img": "",
+      "url": "/logos/rest-api.svg",
+      "link": "https://docs.github.com/en/rest?apiVersion=2022-11-28",
+      "visible": false
+    },
+    {
+      "name": "mqtt",
+      "description": "MQTT (Message Queuing Telemetry Transport) is a lightweight and efficient messaging protocol commonly used in IoT (Internet of Things) applications. It enables communication between devices with minimal overhead, making it suitable for scenarios with limited bandwidth and high latency. MQTT facilitates reliable data exchange in distributed systems.",
+      "des_img": "",
+      "url": "/logos/mqtt.png",
+      "link": "https://mqtt.org/",
+      "visible": false
+    },
+    {
+      "name": "mongodb",
+      "description": "MongoDB is a popular NoSQL database that employs a document-oriented model to store data. It is highly scalable, allowing developers to handle large volumes of structured and unstructured data. MongoDB is commonly used in modern web applications and projects that require flexible and dynamic data storage.",
+      "des_img": "",
+      "url": "/logos/mongodb-icon-1.svg",
+      "link": "https://www.mongodb.com/",
+      "visible": false
+    },
+    {
+      "name": "mysql",
+      "description": "MySQL is a widely-used open-source relational database management system (RDBMS). It provides a reliable and efficient solution for storing and managing structured data. MySQL is commonly used in web applications, content management systems, and other software projects requiring robust data storage and retrieval.",
+      "des_img": "",
+      "url": "/logos/mysql.svg",
+      "link": "https://www.mysql.com/",
+      "visible": false
+    },
+    {
+      "name": "capacitor",
+      "description": "Capacitor is an open-source cross-platform app runtime that enables developers to build web applications that run natively on mobile devices. It provides a set of APIs to access device features and native functionality, making it easier to create hybrid mobile apps using web technologies.",
+      "des_img": "",
+      "url": "/logos/capacitor.png",
+      "link": "https://capacitorjs.com/",
+      "visible": false
+    },
+    {
+      "name": "jquery",
+      "description": "jQuery is a fast and lightweight JavaScript library that simplifies DOM manipulation, event handling, and animation. It provides an abstraction layer over JavaScript, making it easier to interact with web content and create dynamic user experiences. While its usage has decreased with the rise of modern JavaScript frameworks, jQuery remains relevant for certain scenarios.",
+      "des_img": "",
+      "url": "/logos/jquery-2.svg",
+      "link": "https://jquery.com/",
+      "visible": false
+    },
+    {
+      "name": "grafana",
+      "description": "Grafana is an open-source platform used for monitoring and observability in modern software systems. It empowers developers and operators to create interactive and customizable dashboards that visualize metrics and data from various sources. Grafana supports a wide range of data sources and helps ensure the health and performance of applications.",
+      "des_img": "",
+      "url": "/logos/grafana.svg",
+      "link": "https://grafana.com/",
+      "visible": false
+    },
+    {
+      "name": "prometheus",
+      "description": "Prometheus is an open-source monitoring and alerting toolkit designed for collecting and analyzing time-series data. It provides a powerful platform to monitor the performance and health of applications and systems. Prometheus supports real-time monitoring, alerting, and visualization, making it a vital component of modern observability practices.",
+      "des_img": "",
+      "url": "/logos/prometheus.svg",
+      "link": "https://prometheus.io/",
+      "visible": false
+    }
+  ]  
+      ,        
     "socialButtons": [
         {
             "id": "github",
