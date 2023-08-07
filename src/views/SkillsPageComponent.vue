@@ -1,12 +1,12 @@
 <template>
-    <div name="list" tag="ul" class="list">
-        <div class="list-item"
-            v-for="(logo, index) in items" 
+    <v-list>
+        <v-list-item class="list-item"
+                v-for="(logo, index) in logosList" 
                 :key="index+logo.name"
                 :style="{
                     order: index
                 }"
-                        >
+        >
             <div min-height="400" class="pa-8 d-flex align-center justify-space-between" style="gap: 4rem; ">
                 <div id="header" class="d-flex align-start flex-column justify-center" >
                     <img class="skill-logo mr-4" 
@@ -19,8 +19,8 @@
                     <img v-if="logo.des_img" :src="logo.des_img" />
                 </div>
             </div >
-        </div>
-    </div>
+        </v-list-item>
+    </v-list>
     <!-- <v-dialog class="w-50" location="center" min-height="200" min-width="300" v-if="selectedSkill" v-model="isVisible" id="wrapper" >
         
         <v-card min-height="400" class="pa-8 d-flex align-center justify-space-between">
@@ -38,37 +38,49 @@
   </v-dialog> -->
 </template>
 
-<script>
-
+<script lang="ts">
+type RouteLink = {
+    "name": string,
+    "description": string,
+    "des_img": string,
+    "url": string,
+    "link": string,
+    "visible": boolean,
+}
 export default {
     name: "SkillsPageComponent",
-    props:['logosList'],
+    props:{
+        logosList:{
+            type: Array<RouteLink>
+        }
+    },
     data(){
         return{
             id: '',
             selectedSkill: null,
-            items: null,
+            items: [],
             isVisible: false,
         }
     },
     mounted() {
         this.id = 'skills';
-        this.items = this.logosList
     },
     methods: {
-        openDesctiption(skill){
+        openDesctiption(skill: any){
             this.selectedSkill = skill
             this.isVisible = !this.isVisible
         },
-        getImgUrl(url) {
+        getImgUrl(url: string) {
             return './assets'+url
         },
-        goTo(url){
+        goTo(url: string){
             window.open( url, "_blank");
         }
     }
 }
 </script>
+
+
 
 <style lang="scss" scoped>
 .list{

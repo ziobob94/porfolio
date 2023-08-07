@@ -1,19 +1,19 @@
 <template>
-    <div class="switch-theme-wrapper">
-        <v-switch @change="toggleTheme">
-            <template v-slot:label>
-                <v-icon size="small" icon="mdi-theme-light-dark"></v-icon>
-            </template>
-        </v-switch>
-    </div>
- 
+  <div class="switch-theme-wrapper">
+    <v-switch @change="toggleTheme">
+        <template v-slot:label>
+            <v-icon size="small" icon="mdi-theme-light-dark"></v-icon>
+        </template>
+    </v-switch>
+  </div>
+
 </template>
   
-<script>
+<script lang="ts">
 import { useTheme } from 'vuetify'
 
 export default {
-    name:"TheThemeSwitcher",
+  name:"TheThemeSwitcher",
   setup () {
     const theme = useTheme()
 

@@ -24,7 +24,7 @@
    
 </template>
 
-<script>
+<script lang="ts">
 export default {
   name: 'HomePageComponent',
   components: {
@@ -36,10 +36,10 @@ export default {
     }
   },
   methods: {
-    getImgUrl(url) {
+    getImgUrl(url: string) {
             return './assets'+url
         },
-    goTo(url,id){
+    goTo(url: string ,id: string){
         if(id !== 'mail') window.open( url, "_blank");
     }
   },

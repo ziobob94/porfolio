@@ -10,7 +10,7 @@
                 :to="item.to">{{item.label}}</v-tab>
     </v-tabs>
     
-    <TheThemeSwhitcher  v-if="isTab" class=""/>
+    <TheThemeSwhitcher  v-if="isTab" />
 
     <v-list v-if="isSide">
         <v-list-item v-for="(item, index) in items" 
@@ -20,7 +20,7 @@
         </v-list-item>
     </v-list>
 </template>
-<script>
+<script lang="ts">
 import TheThemeSwhitcher from '../utils/TheThemeSwhitcher.vue';
 
 
@@ -72,7 +72,7 @@ export default {
         }
     },
     methods: {
-        navigate(to){
+        navigate(to: any){
             this.$router.push(to);
         },
     }

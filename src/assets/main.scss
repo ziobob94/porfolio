@@ -1,0 +1,25 @@
+
+/* Hide both vertical and horizontal scrollbars */
+*::-webkit-scrollbar {
+  display: none !important;
+}
+
+/* Track */
+*::-webkit-scrollbar-track {
+  display: none !important; /* You can use a specific color here */
+}
+
+/* Handle */
+*::-webkit-scrollbar-thumb {
+  display: none !important; /* You can use a specific color here */
+}
+
+/* Optional: Hover styles for the scrollbar handle */
+*::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.2); /* Change the color or add a border on hover */
+    display: none !important; /* You can use a specific color here */
+
+}
+
+
+
