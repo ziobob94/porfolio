@@ -11,7 +11,7 @@ const routes = [
             {
                 name: 'home',
                 path: '/home',
-                component: () => import(/* webpackChunkName: "home" */ '@/views/HomePageComponent.vue'),
+                component: () => import('@/views/HomePageComponent.vue'),
                 meta: { transitionName: '' },
                 props: {
                     socialButtons: configs.socialButtons
@@ -20,19 +20,19 @@ const routes = [
             {
                 name: 'about',
                 path: '/about',
-                component: () => import(/* webpackChunkName: "home" */ '@/views/AboutPageComponent.vue'),
+                component: () => import('@/views/AboutPageComponent.vue'),
                 meta: { transitionName: '' },
             },
             {
                 name: 'life',
                 path: '/life',
-                component: () => import(/* webpackChunkName: "home" */ '@/views/LifePageComponent.vue'),
+                component: () => import('@/views/LifePageComponent.vue'),
                 meta: { transitionName: '' },
             },
             {
                 name: 'skills',
                 path: '/skills',
-                component: () => import(/* webpackChunkName: "home" */ '@/views/SkillsPageComponent.vue'),
+                component: () => import('@/views/SkillsPageComponent.vue'),
                 meta: { transitionName: '' },
                 props: {
                     logosList: configs.logosList

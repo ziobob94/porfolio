@@ -140,10 +140,11 @@ export default defineComponent( {
 
 #container {
   height: 100%;
-  max-width: 1200px;
-  padding: 1rem 0 !important;
+  max-width: 2048px;
+  padding: 0 1rem !important;
   border-left: 1px solid #80808033;
   border-right: 1px solid #80808033;
+  overflow-y: auto ;
 }
 
 

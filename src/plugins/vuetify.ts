@@ -11,7 +11,7 @@ import * as components from 'vuetify/components';
 import * as directives from 'vuetify/directives';
 
 // Composables
-import { createVuetify } from 'vuetify'
+import { VuetifyOptions, createVuetify } from 'vuetify'
 
 
 
@@ -98,9 +98,10 @@ const  display = {
   }
 }
 
-const vf = {
+const vf : VuetifyOptions = {
   display,
   theme: {
+    defaultTheme: 'light',
     themes: {
       light: themes.ligth,
       dark: themes.dark

@@ -1,10 +1,10 @@
 <template>
-    <div class="home-wrapper d-flex align-start justify-center flex-column " >
-        <div class="content-item">
+    <v-container class="home-wrapper w-auto d-flex align-start justify-center flex-column " >
+        <v-sheet class="content-item">
             <h1> Hi!
             I am Mauro <br>
             And I am Fullstack Developer </h1>
-        </div>
+        </v-sheet>
 
         <div class="content-item">
             <p style="font-size: 20px;"> Fullstack Developer  </p>
@@ -20,7 +20,7 @@
                 />
             </div> 
         </div>
-    </div>
+    </v-container>
    
 </template>
 
@@ -104,7 +104,7 @@ export default {
 }
 
 .home-wrapper{
-    gap: 4rem;
+    gap: 2rem;
 }
 
 </style>

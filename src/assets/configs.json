@@ -175,6 +175,14 @@
       "url": "/logos/prometheus.svg",
       "link": "https://prometheus.io/",
       "visible": false
+    },
+    {
+      "name": "Work in progress...",
+      "description": "",
+      "des_img": "",
+      "url": "",
+      "link": "",
+      "visible": false
     }
   ]  
       ,        
