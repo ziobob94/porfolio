@@ -39,7 +39,7 @@
     <v-main class="d-flex">
       <!-- MOBILE -->
       <v-layout v-if="display.smAndDown.value"  :theme="themeName" >
-        <v-app-bar color="primary"  name="app-bar" class="d-flex justify-space-between">
+        <v-app-bar color="primary"  name="app-bar" class="d-flex justify-space-between align-center">
           <v-app-bar-nav-icon @click="drawer = !drawer"/>
           <TheThemeSwhitcher />
         </v-app-bar>

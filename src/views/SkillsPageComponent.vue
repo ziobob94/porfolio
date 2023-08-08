@@ -1,5 +1,5 @@
 <template>
-   <!--  <v-list>
+    <!--  <v-list>
         <v-list-item class="list-item"
         v-for="(logo, index) in logosList" 
         :key="index+logo.name"
@@ -7,20 +7,20 @@
             order: index
         }"
         >
-            <div min-height="400" class="pa-8 d-flex align-center justify-space-between" style="gap: 4rem; ">
-                <div id="header" class="d-flex align-start flex-column justify-center" >
-                    <img class="skill-logo mr-4" 
-                    :src="'./assets'+logo.url" 
-                    />
-                    <h1>{{ logo.name.toUpperCase()  }}</h1>
-                </div>
-                <div id="content" >
-                    <p class="my-4"> {{ logo.description }}</p>
-                    <img v-if="logo.des_img" :src="logo.des_img" />
-                </div>
-            </div >
-        </v-list-item>
-    </v-list> -->
+        <div min-height="400" class="pa-8 d-flex align-center justify-space-between" style="gap: 4rem; ">
+            <div id="header" class="d-flex align-start flex-column justify-center" >
+                <img class="skill-logo mr-4" 
+                :src="'./assets'+logo.url" 
+                />
+                <h1>{{ logo.name.toUpperCase()  }}</h1>
+            </div>
+            <div id="content" >
+                <p class="my-4"> {{ logo.description }}</p>
+                <img v-if="logo.des_img" :src="logo.des_img" />
+            </div>
+        </div >
+    </v-list-item>
+</v-list> -->
 <!-- <v-dialog class="w-50" location="center" min-height="200" min-width="300" v-if="selectedSkill" v-model="isVisible" id="wrapper" >
     
     <v-card min-height="400" class="pa-8 d-flex align-center justify-space-between">
@@ -38,35 +38,37 @@
 </v-dialog> -->
 
 <v-container id="skill-timeline-container">
-    <v-timeline class="pb-8" truncate-line="end">
+    <v-timeline class="pb-8" truncate-line="end" :side="(display.smAndDown.value) ? 'end' : undefined">
         <v-timeline-item v-for="(logo, index) in logosList"  
-            :key="index"
-            dot-color="purple-lighten-2"
-            fill-dot
-            class="item-timeline mb-4"
+        :key="index"
+        :dot-color="`${getRandomColor(index+5)}-lighten-2`"
+        fill-dot
+        class="item-timeline mb-4 w-100"
+        max-width="86%"
+        min-width="86%"
         >
-            <v-card min-height="12rem">
-                <v-card-title 
-                    :class="{'timeline-card-title d-flex align-center justify-start': true, [`bg-${getRandomColor(index)}-lighten-2`]: true, 'justify-end': index % 2 === 0 }"
-                >
-                    <v-img
-                        v-if="logo.url"
-                        contain
-                        :width="50"
-                        :src="'./assets' + logo.url" 
-                        class="timeline-logo"
-                        :style="{order: (index%2===0) ? 2 : 0}"
-                    ></v-img>
-                    <h2 class="font-weight-light" style="order: 1">
-                        {{ logo.name.toUpperCase() }}
-                    </h2>
-                </v-card-title>
-                <v-card-text class="card-text pa-4">
-                    {{ logo.description }}
-                </v-card-text>
-            </v-card>
-        </v-timeline-item>
-    </v-timeline> 
+        <v-card min-height="12rem">
+            <v-card-title 
+            :class="{'timeline-card-title d-flex align-center justify-start': true, [`bg-${getRandomColor(index)}-lighten-2`]: true, 'justify-end': index % 2 === 0 }"
+            >
+            <v-img
+            v-if="logo.url"
+            contain
+            :width="50"
+            :src="'./assets' + logo.url" 
+            class="timeline-logo"
+            :style="{order: (index%2===0) ? 2 : 0}"
+            ></v-img>
+            <h2 class="card-title" :style="{order: 1 }">
+                {{ logo.name.toUpperCase() }}
+            </h2>
+        </v-card-title>
+        <v-card-text class="card-text pa-4">
+            {{ logo.description }}
+        </v-card-text>
+    </v-card>
+</v-timeline-item>
+</v-timeline> 
 </v-container>
 
 
@@ -74,6 +76,7 @@
 
 <script lang="ts">
 import seedrandom from 'seedrandom';
+import { useDisplay } from 'vuetify/lib/framework.mjs'
 
 type RouteLink = {
     "name": string,
@@ -115,6 +118,14 @@ export default {
                 "orange"
                 ],
             }
+        },
+        computed: {
+            display:{
+                get(){
+                    return useDisplay();
+                },
+                set(){}
+            },
         },
         mounted() {
             this.id = 'skills';
@@ -165,8 +176,8 @@ export default {
 }
 
 .timeline-logo{
-    max-width: 40px;
-    height: 40px;
+    max-width: 30px;
+    height: 30px;
     align-self: start;
 }
 
@@ -213,5 +224,11 @@ export default {
     font-size: 16px;
     display: flex;
     align-items: center;
+}
+
+.card-title{
+    color: black;
+    font-weight: 300;
+    font-size: x-large;
 }
 </style>

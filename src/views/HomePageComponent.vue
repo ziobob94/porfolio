@@ -13,11 +13,13 @@
         <div class="content-item flex-row justify-start" >
             <div v-for="(social) in socialButtons" :key="social.id"
                     class="w-auto mr-2"
-                    @click="goTo(social.link, social.id)"
+                   
             >
-                <img class="logo"
-                    :src='getImgUrl(social.icon)'
-                />
+               <a :href="social.link" target="_blank">
+                    <img class="logo"
+                        :src='getImgUrl(social.icon)'
+                    />
+               </a> 
             </div> 
         </div>
     </v-container>
@@ -66,6 +68,7 @@ export default {
     margin: 0.5rem 0;
     width: 100%;
     max-width: 500px;
+    background: transparent;
     & > *{
         width: 100%;
     }

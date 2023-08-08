@@ -177,7 +177,7 @@
       "visible": false
     },
     {
-      "name": "Work in progress...",
+      "name": "working",
       "description": "",
       "des_img": "",
       "url": "",
@@ -203,19 +203,19 @@
             "id": "instagram",
             "name": "instagram",
             "icon": "/social/instagram.svg",
-            "link":""
+            "link":"https://www.instagram.com/mciccullo/"
         },
         {
             "id": "telegram",
             "name": "telegram",
             "icon": "/social/telegram.svg",
-            "link": ""
+            "link": "https://t.me/freeSoul168"
         },
        {
             "id": "mail",
             "name": "mail",
             "icon": "/social/mail.svg",
-            "link":""
+            "link":"mailto:mauro.ciccullo94@gmail.com?subject = Request from soulwebdev.it"
         }
     ]
 
