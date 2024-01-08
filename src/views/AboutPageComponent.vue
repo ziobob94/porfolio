@@ -1,15 +1,11 @@
 <template>
-  <div id="about" class="body-container" >
+  <div id="about" class="body-container">
     <h1> Coming soon... </h1>
   </div>
 </template>
 
-<script lang="ts">
-export default {
-  name: "AboutPageComponent"
-}
+<script setup lang="ts">
+
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

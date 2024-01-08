@@ -9,19 +9,11 @@
 
 </template>
   
-<script lang="ts">
+<script setup lang="ts">
 import { useTheme } from 'vuetify'
-
-export default {
-  name:"TheThemeSwitcher",
-  setup () {
-    const theme = useTheme()
-
-    return {
-      theme,
-      toggleTheme: () => theme.global.name.value = theme.global.current.value.dark ? 'light' : 'dark'
-    }
-  },
+const theme = useTheme();
+const toggleTheme = () => {
+  theme.global.name.value = (theme.global.current.value.dark) ? 'light' : 'dark';
 }
 </script>
 

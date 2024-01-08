@@ -12,10 +12,7 @@ const routes = [
                 name: 'home',
                 path: '/home',
                 component: () => import('@/views/HomePageComponent.vue'),
-                meta: { transitionName: '' },
-                props: {
-                    socialButtons: configs.socialButtons
-                }
+                meta: { transitionName: '' }
             },
             {
                 name: 'about',

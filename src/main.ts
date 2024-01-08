@@ -7,7 +7,7 @@
 // Components
 import App from './App.vue'
 import '@/assets/main.scss'
-
+import 'animate.css';
 // Composables
 import { createApp } from 'vue'
 
